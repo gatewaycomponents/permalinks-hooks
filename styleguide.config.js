@@ -27,30 +27,4 @@ module.exports = {
     url: repository.url,
     text: 'View on GitHub',
   },
-  configureServer(app) {
-    // `app` is the instance of the express server running Styleguidist
-    app.get('/*', (req, res) => {
-      res.status(200).send({ response: 'Server invoked' })
-    })
-  },
-  // webpackConfig: {
-  //   devServer: {
-  //     publicPath: '/',
-  //   },
-  //   devtool: 'source-map',
-  //   module: {
-  //     rules: [
-  //       {
-  //         test: /\.js$/,
-  //         exclude: /node_modules/,
-  //         loader: 'babel-loader',
-  //       },
-  //       {
-  //         test: /\.jsx$/,
-  //         exclude: /node_modules/,
-  //         loader: 'babel-loader',
-  //       }
-  //     ],
-  //   },
-  // }
 };
