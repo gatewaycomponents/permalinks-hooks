@@ -10,7 +10,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
     filename: 'index.js',
     library: 'index',
     globalObject: "this",

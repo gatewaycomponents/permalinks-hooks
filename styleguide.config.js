@@ -7,6 +7,11 @@ const {
 } = require('./package.json');
 
 module.exports = {
+  dangerouslyUpdateWebpackConfig(webpackConfig, env) {
+    webpackConfig.output.publicPath = '/';
+    console.log(webpackConfig);
+    return webpackConfig;
+  },
   pagePerSection: true,
   usageMode: 'expand',
   exampleMode: 'expand',
