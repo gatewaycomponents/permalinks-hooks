@@ -7,7 +7,7 @@ const {
 } = require('./package.json');
 
 module.exports = {
-  pagePerSection: false,
+  pagePerSection: true,
   usageMode: 'expand',
   exampleMode: 'expand',
   components: 'src/documentation/**/*.{js,jsx,ts,tsx}',
@@ -26,6 +26,12 @@ module.exports = {
   ribbon: {
     url: repository.url,
     text: 'View on GitHub',
+  },
+  configureServer(app) {
+    // `app` is the instance of the express server running Styleguidist
+    app.get('/*', (req, res) => {
+      res.status(200).send({ response: 'Server invoked' })
+    })
   },
   // webpackConfig: {
   //   devServer: {
@@ -46,5 +52,5 @@ module.exports = {
   //       }
   //     ],
   //   },
-  }
+  // }
 };
