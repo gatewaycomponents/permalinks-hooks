@@ -8,8 +8,8 @@ const {
 
 module.exports = {
   dangerouslyUpdateWebpackConfig(webpackConfig, env) {
-    webpackConfig.output.publicPath = '/';
-    console.log(webpackConfig);
+    // webpackConfig.plugins[1] points to the mini-html-webpack-plugin, by changing the publicPath to '/' it now embeds the bundles with an absolute path, this is to make permalinks work.
+    webpackConfig.plugins[1].options = {...webpackConfig.plugins[1].options, publicPath: '/'} 
     return webpackConfig;
   },
   pagePerSection: true,
