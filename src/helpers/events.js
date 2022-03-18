@@ -1,9 +1,9 @@
 function on(eventType, listener) {
-  document.addEventListener(eventType, listener);
+  window.addEventListener(eventType, listener);
 }
 
 function off(eventType, listener) {
-  document.removeEventListener(eventType, listener);
+  window.removeEventListener(eventType, listener);
 }
 
 function once(eventType, listener) {
@@ -17,7 +17,7 @@ function once(eventType, listener) {
 
 function trigger(eventType, data) {
   const event = new CustomEvent(eventType, { detail: data });
-  document.dispatchEvent(event);
+  window.dispatchEvent(event);
 }
 
 export { on, off, once, trigger };

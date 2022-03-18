@@ -1,6 +1,6 @@
 # useLocation
 
-Parses all path parts and query parameters using window.location, and provides ways to change the window location.
+Uses current window location and adds enhanced functionality.
 
 ```js
 import { useState } from 'react';
@@ -8,16 +8,24 @@ import { useLocation } from 'dcs-permalinks';
 import ReactJson from 'react-json-view';
 
 function Component () {
-  const { pathArray, queryObject, pushLocation } = useLocation();
+  const location = useLocation();
 
-  const link = {
-    state: {id: 'myCustomLink'},
-    path: '/path/to/file?query=string'
-  }
+  const link = '/path/to/file?query=string'
+
+  const {
+    href,
+    pathname,
+    patharray,
+    searh,
+    query
+  } = location;
 
   const json = {
-    pathArray,
-    queryObject
+    href,
+    pathname,
+    patharray,
+    searh,
+    query
   };
 
   return (
@@ -27,8 +35,8 @@ function Component () {
         src={json || {}}
         theme="monokai"
       />
-      <button style={{margin: '1em'}} onClick={() => {pushLocation(link);}}>Change location</button>
-      <button style={{margin: '1em'}} onClick={() => {pushLocation({state:{id:'home'}, path: '/'});}}>Go home</button>
+      <button style={{margin: '1em'}} onClick={() => { location.push(link) }}>Change location</button>
+      <button style={{margin: '1em'}} onClick={() => { location.push('/') }}>Go home</button>
     </>
   );
 };

@@ -20,7 +20,7 @@ const routes = [
 
 function Component () {
 
-  const { data, push } = usePermalinks({
+  const { permalink: data, push } = usePermalinks({
     routes
   });
   
@@ -49,7 +49,7 @@ function Component () {
 
 ```js
 import { useState } from 'react';
-import { usePermalinks, PermalinksConfig } from 'dcs-permalinks';
+import { usePermalinks, PermalinksConfig, useLocation } from 'dcs-permalinks';
 import ReactJson from 'react-json-view';
 
 const routes = [
@@ -64,8 +64,8 @@ const routes = [
 ]
 
 function Scripture () {
-  const { data } = usePermalinks({});
-  return(data && data.entry === 'scripture' &&
+  const { permalink: data, entry } = usePermalinks({});
+  return( entry === 'scripture' &&
     <div>
       <h2>Scripture: {data.book} {data.chapter}:{data.verse} {data.resource}</h2>
       <ReactJson
@@ -78,8 +78,8 @@ function Scripture () {
 }
 
 function Resource () {
-  const { data } = usePermalinks({});
-  return(data && data.entry === 'resource'  &&
+  const { permalink: data, entry } = usePermalinks({});
+  return(entry === 'resource' &&
     <div>
       <h2>Resource: {data.resource}</h2>
       <h3>Data to load translation resources:</h3>
@@ -94,7 +94,7 @@ function Resource () {
 
 function Component () {
 
-  const { push } = usePermalinks({});
+  const { push } = useLocation();
   
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
   const link2 = '/scripture/unfoldingWord/en/ult/master/tit/3/12';

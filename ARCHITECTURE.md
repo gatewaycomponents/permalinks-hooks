@@ -48,4 +48,4 @@ Documentation includes .MD documented examples and wrapper JSX files to enable S
 
 - `usePermalinks`
 - `useLocation`
-- `useRouteData`
+- `useRoute`

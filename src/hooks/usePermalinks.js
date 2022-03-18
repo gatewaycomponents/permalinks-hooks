@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { PermalinksContext } from "../context/PermalinksConfig";
 import useLocation from "./useLocation";
-import useRouteData from "./useRouteData";
+import useRoute from "./useRoute";
 
+// Uses an array of routes objects to return permalink and location data for current URL. This is an enhanced version of useLocation.
 export default function usePermalinks({ routes, /*id, config*/ }) {
-  const { pathArray, queryObject, pushLocation, navigateTo } = useLocation();
+  const { patharray, query: locationQuery, ...location } = useLocation();
 
   const {
     routes: contextRoutes,
@@ -15,22 +16,28 @@ export default function usePermalinks({ routes, /*id, config*/ }) {
   // const _id = id ?? contextId;
   const _routes = routes || contextRoutes; //use context if not routes provided
 
-  const push = (path) => pushLocation({ path }, path);
-  const navigate = (path) => navigateTo({ path });
+  //route object that matches current URL.
+  const route = _routes?.find((route) => patharray?.includes(route.entry));
 
-  const route = _routes?.find((route) => pathArray?.includes(route.entry));
-
-  const routePath = pathArray?.slice(
-    pathArray?.findIndex((path) => path === route?.entry) + 1
+  //slice of current URL that matches route from entry point.
+  const routePath = patharray?.slice(
+    patharray?.findIndex((path) => path === route?.entry) + 1
   );
-
-  const { routeData, isLoading } = useRouteData({
+  
+  const { permalink, query, entry } = useRoute({
     route,
     routePath,
-    queryObject
+    query: locationQuery
   });
 
   //TODO Receive default routeData and push location.
 
-  return { data: routeData, isLoading, push, navigate };
+  return {
+    ...location,
+    entry,
+    permalink,
+    query,
+    patharray,
+    isLoading: !permalink && route?.path?.length > 0
+  };
 }
