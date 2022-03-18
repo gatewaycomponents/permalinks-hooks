@@ -16,7 +16,7 @@ function Component () {
     href,
     pathname,
     patharray,
-    searh,
+    search,
     query
   } = location;
 
@@ -24,7 +24,7 @@ function Component () {
     href,
     pathname,
     patharray,
-    searh,
+    search,
     query
   };
 
