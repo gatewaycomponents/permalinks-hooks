@@ -10,6 +10,7 @@ import ReactJson from 'react-json-view';
 function Component () {
   const location = useLocation();
 
+  // Change this here and click "Change location" or use your browser address bar to get different results.
   const link = '/path/to/file?query=string'
 
   const {

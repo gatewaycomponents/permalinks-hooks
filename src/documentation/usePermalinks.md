@@ -24,8 +24,8 @@ function Component () {
     routes
   });
   
+  // Change this links and click "Change location" or use your browser address bar to get different results.
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
-  
   const link2 = '/scripture/unfoldingWord/en/ult/master/tit/3/12';
 
   return (
@@ -96,6 +96,7 @@ function Component () {
 
   const { push } = useLocation();
   
+  // Change this links and click "Change location" or use your browser address bar to get different results.
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
   const link2 = '/scripture/unfoldingWord/en/ult/master/tit/3/12';
 

@@ -16,6 +16,7 @@ function Component () {
   const { patharray, query, push } = useLocation();
   const data = useRoute({route,routePath:patharray,query});
 
+  // Change this link and click "Change location" or use your browser address bar to get different results.
   const link = '/johndoe/javascript/how-to-react?search=custom+hooks';
 
   return (
