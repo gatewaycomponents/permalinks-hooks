@@ -25,7 +25,6 @@ export default function useLocation() {
   //Add event listeners
   useEffect(() => {
     const updateLocation = () => {
-      console.log("locationpush triggered")
       setLocation( getCurrentLocation );
     };
 
