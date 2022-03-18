@@ -13,7 +13,8 @@ export default function useRoute({ route, routePath, query: locationQuery }) {
       prev.permalink[pathname] = queryMatch;
       delete prev.query[pathname];
     } else {
-      prev.permalink[pathname] = catchAll ? routePath.slice(index)?.join("/") : routePath[index];
+      const path = catchAll ? routePath.slice(index)?.join("/") : routePath[index];
+      prev.permalink[pathname] = path !== "" ? path : undefined;
     }
 
     return prev;

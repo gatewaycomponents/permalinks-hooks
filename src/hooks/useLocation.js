@@ -42,7 +42,7 @@ export default function useLocation() {
 
   //Get path parts from url and add them to an array
   const patharray = useMemo(
-    () => (location.pathname ? [...location.pathname.split("/").slice(1)] : []),
+    () => (location.pathname && location.pathname !== "/" ? [...location.pathname.split("/").slice(1)] : []),
     [location.pathname]
   );
 
