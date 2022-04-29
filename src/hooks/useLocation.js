@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { off, on, trigger } from "../helpers/events";
+import { off, on } from "../helpers/events";
 
 // Uses current window location and adds enhanced functionality
 export default function useLocation() {
@@ -52,23 +52,8 @@ export default function useLocation() {
     return { ...Object.fromEntries(queryParams?.entries()) };
   }, [location.search]);
 
-  //Function to navigate to given url relative to baseUrl
-  const load = (path) => {
-    const newLocation = window.location.origin + (path.startsWith("/") ? "" : "/") + path;
-    window.location.assign(newLocation);
-  };
 
-  //Function to handle client-side transitions
-  const push = (path, state = null) => {
-    const newLocation = window.location.origin + (path.startsWith("/") ? "" : "/") + path;
-    window.history.pushState(state, "", newLocation);
-    trigger("locationpush");
-  };
-
-  //Function to navigate back in history
-  const back = () => window.history.back();
-
-  return { ...location, patharray, query, push, load, back };
+  return { ...location, patharray, query };
 }
 
 const getCurrentLocation = () => {

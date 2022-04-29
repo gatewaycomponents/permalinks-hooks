@@ -4,7 +4,7 @@ Receives an array of routes and matches the current url to return the a data obj
 
 ```js
 import { useState } from 'react';
-import { usePermalinks } from 'dcs-permalinks';
+import { usePermalinks, useNavigation } from 'dcs-permalinks';
 import ReactJson from 'react-json-view';
 
 const routes = [
@@ -20,9 +20,10 @@ const routes = [
 
 function Component () {
 
-  const { permalink: data, push } = usePermalinks({
+  const { permalink: data } = usePermalinks({
     routes
   });
+  const { push } = useNavigation();
   
   // Change this links and click "Change location" or use your browser address bar to get different results.
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
@@ -49,7 +50,7 @@ function Component () {
 
 ```js
 import { useState } from 'react';
-import { usePermalinks, PermalinksConfig, useLocation } from 'dcs-permalinks';
+import { usePermalinks, PermalinksConfig, useLocation, useNavigation } from 'dcs-permalinks';
 import ReactJson from 'react-json-view';
 
 const routes = [
@@ -94,7 +95,7 @@ function Resource () {
 
 function Component () {
 
-  const { push } = useLocation();
+  const { push } = useNavigation();
   
   // Change this links and click "Change location" or use your browser address bar to get different results.
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';

@@ -4,7 +4,7 @@ Receives a route object and url data, and retrieves a single new object.
 
 ```js
 import { useState } from 'react';
-import { useRoute, useLocation } from 'dcs-permalinks';
+import { useRoute, useLocation, useNavigation } from 'dcs-permalinks';
 import ReactJson from 'react-json-view';
 
 const route = {
@@ -13,7 +13,8 @@ const route = {
 }
 
 function Component () {
-  const { patharray, query, push } = useLocation();
+  const { patharray, query } = useLocation();
+  const { push } = useNavigation();
   const data = useRoute({route,routePath:patharray,query});
 
   // Change this link and click "Change location" or use your browser address bar to get different results.
