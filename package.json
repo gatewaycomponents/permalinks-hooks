@@ -1,5 +1,5 @@
 {
-  "name": "permalinks-hooks",
+  "name": "@gwdevs/permalinks-hooks",
   "description": "A collection of React Hooks that provide a way to simplify the implementation of permalinks into your React projects.",
   "version": "1.0.0-beta.1",
   "private": false,
