@@ -1,6 +1,6 @@
 # Architecture
 
-The architecture of `dcs-permalinks` is broken down into three primary layers but all provided through React Custom Hooks.
+The architecture of `permalinks-hooks` is broken down into three primary layers but all provided through React Custom Hooks.
 
 - Design Principles
   - Do one thing well

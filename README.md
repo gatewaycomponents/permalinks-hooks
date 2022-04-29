@@ -26,7 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/abelpz/dcs-permalinks">
+  <a href="https://github.com/gatewaycomponents/permalinks-hooks">
     <img src="public/logo500.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -34,14 +34,14 @@
   <p align="center">
     Open paths through the forests of forms of your app.
     <br />
-    <a href="https://dcs-permalinks.netlify.app"><strong>Explore the docs and code playground »</strong></a>
+    <a href="https://permalinks-hooks.netlify.app"><strong>Explore the docs and code playground »</strong></a>
     <br />
     <br />
-    <a href="https://dcs-permalinks.netlify.app">View Demo</a>
+    <a href="https://permalinks-hooks.netlify.app">View Demo</a>
     ·
-    <a href="https://github.com/abelpz/dcs-permalinks/issues">Report Bug</a>
+    <a href="https://github.com/gatewaycomponents/permalinks-hooks/issues">Report Bug</a>
     ·
-    <a href="https://github.com/abelpz/dcs-permalinks/issues">Request Feature</a>
+    <a href="https://github.com/gatewaycomponents/permalinks-hooks/issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,7 +77,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://dcs-permalinks.netlify.app/)
+[![Product Name Screen Shot][product-screenshot]](https://permalinks-hooks.netlify.app/)
 
 **Purpose:**
 A collection of React Hooks that provide a way to simplify the implementation of permalinks into your React projects.
@@ -124,16 +124,16 @@ This is an example of how to list things you need to use the software and how to
 
 1. Setup a React app using `Create React App` or `React Styleguidist`.
   ```sh
-  npx create-react-app dcs-permalinks-app
+  npx create-react-app permalinks-hooks-app
   ```
 2. Add it to your React app or component library (inside your project path):
   * yarn
   ```sh
-  yarn add dcs-permalinks
+  yarn add permalinks-hooks
   ```
   * npm
   ```sh
-  npm i dcs-permalinks
+  npm i permalinks-hooks
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -144,7 +144,7 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Styleguidist](https://dcs-permalinks.netlify.app/#usepermalinks)._
+_For more examples, please refer to the [Styleguidist](https://permalinks-hooks.netlify.app/#usepermalinks)._
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -152,10 +152,10 @@ _For more examples, please refer to the [Styleguidist](https://dcs-permalinks.ne
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] [Return `data` fetched using url params](https://github.com/abelpz/dcs-permalinks/issues/16)
-- [ ] [Change path dynamically depending on app state](https://github.com/abelpz/dcs-permalinks/issues/4)
+- [ ] [Return `data` fetched using url params](https://github.com/gatewaycomponents/permalinks-hooks/issues/16)
+- [ ] [Change path dynamically depending on app state](https://github.com/gatewaycomponents/permalinks-hooks/issues/4)
 
-See the [open issues](https://github.com/abelpz/dcs-permalinks/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/gatewaycomponents/permalinks-hooks/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -192,7 +192,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Abel Perez - abelperez@idiomaspuentes.org
 
-Project Link: [https://github.com/abelpz/dcs-permalinks](https://github.com/abelpz/dcs-permalinks)
+Project Link: [https://github.com/gatewaycomponents/permalinks-hooks](https://github.com/gatewaycomponents/permalinks-hooks)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -201,7 +201,7 @@ Project Link: [https://github.com/abelpz/dcs-permalinks](https://github.com/abel
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Abel Perez](https://github.com/abelpz)
+* [Abel Perez](https://github.com/gatewaycomponents)
 * [klappy](https://github.com/klappy)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -210,14 +210,14 @@ Project Link: [https://github.com/abelpz/dcs-permalinks](https://github.com/abel
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/abelpz/dcs-permalinks.svg?style=flat
-[contributors-url]: https://github.com/abelpz/dcs-permalinks/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/abelpz/dcs-permalinks.svg?style=flat
-[forks-url]: https://github.com/abelpz/dcs-permalinks/network/members
-[stars-shield]: https://img.shields.io/github/stars/abelpz/dcs-permalinks.svg?style=flat
-[stars-url]: https://github.com/abelpz/dcs-permalinks/stargazers
-[issues-shield]: https://img.shields.io/github/issues/abelpz/dcs-permalinks.svg?style=flat
-[issues-url]: https://github.com/abelpz/dcs-permalinks/issues
-[license-shield]: https://img.shields.io/github/license/abelpz/dcs-permalinks.svg?style=flat
-[license-url]: https://github.com/abelpz/dcs-permalinks/blob/master/LICENSE
-[product-screenshot]: https://github.com/abelpz/dcs-permalinks/raw/master/public/screen-shot.png
+[contributors-shield]: https://img.shields.io/github/contributors/gatewaycomponents/permalinks-hooks.svg?style=flat
+[contributors-url]: https://github.com/gatewaycomponents/permalinks-hooks/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/gatewaycomponents/permalinks-hooks.svg?style=flat
+[forks-url]: https://github.com/gatewaycomponents/permalinks-hooks/network/members
+[stars-shield]: https://img.shields.io/github/stars/gatewaycomponents/permalinks-hooks.svg?style=flat
+[stars-url]: https://github.com/gatewaycomponents/permalinks-hooks/stargazers
+[issues-shield]: https://img.shields.io/github/issues/gatewaycomponents/permalinks-hooks.svg?style=flat
+[issues-url]: https://github.com/gatewaycomponents/permalinks-hooks/issues
+[license-shield]: https://img.shields.io/github/license/gatewaycomponents/permalinks-hooks.svg?style=flat
+[license-url]: https://github.com/gatewaycomponents/permalinks-hooks/blob/master/LICENSE
+[product-screenshot]: https://github.com/gatewaycomponents/permalinks-hooks/raw/master/public/screen-shot.png

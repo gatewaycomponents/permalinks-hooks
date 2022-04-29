@@ -4,7 +4,7 @@ Receives an array of routes and matches the current url to return the a data obj
 
 ```js
 import { useState } from 'react';
-import { usePermalinks, useNavigation } from 'dcs-permalinks';
+import { usePermalinks, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';
 
 const routes = [
@@ -50,7 +50,7 @@ function Component () {
 
 ```js
 import { useState } from 'react';
-import { usePermalinks, PermalinksConfig, useLocation, useNavigation } from 'dcs-permalinks';
+import { usePermalinks, PermalinksConfig, useLocation, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';
 
 const routes = [

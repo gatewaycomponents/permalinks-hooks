@@ -16,10 +16,10 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   components: 'src/documentation/**/*.{js,jsx,ts,tsx}',
-  moduleAliases: { 'dcs-permalinks': path.resolve(__dirname, 'src') },
+  moduleAliases: { 'permalinks-hooks': path.resolve(__dirname, 'src') },
   getComponentPathLine: componentPath => {
     const name = path.basename(componentPath, '.js');
-    return `import { ${name.split('.')[0]} } from 'dcs-permalinks';`;
+    return `import { ${name.split('.')[0]} } from 'permalinks-hooks';`;
   },
   handlers: componentPath => (
     require('react-docgen').defaultHandlers.concat(

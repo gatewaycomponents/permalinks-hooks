@@ -4,7 +4,7 @@ Receives a route object and url data, and retrieves a single new object.
 
 ```js
 import { useState } from 'react';
-import { useRoute, useLocation, useNavigation } from 'dcs-permalinks';
+import { useRoute, useLocation, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';
 
 const route = {

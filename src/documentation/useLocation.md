@@ -4,7 +4,7 @@ Uses current window location and adds enhanced functionality.
 
 ```js
 import { useState } from 'react';
-import { useLocation, useNavigation } from 'dcs-permalinks';
+import { useLocation, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';
 
 function Component () {
