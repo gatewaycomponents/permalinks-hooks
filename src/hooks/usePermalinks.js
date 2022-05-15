@@ -38,6 +38,6 @@ export default function usePermalinks({ routes, /*id, config*/ }) {
     permalink,
     query,
     patharray,
-    isLoading: !permalink && location.pathname
+    isLoading: !permalink && !location?.pathname
   };
 }
