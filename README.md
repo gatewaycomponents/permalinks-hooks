@@ -124,16 +124,16 @@ This is an example of how to list things you need to use the software and how to
 
 1. Setup a React app using `Create React App` or `React Styleguidist`.
   ```sh
-  npx create-react-app permalinks-hooks-app
+  npx create-react-app my-app
   ```
 2. Add it to your React app or component library (inside your project path):
   * yarn
   ```sh
-  yarn add permalinks-hooks
+  yarn add @gwdevs/permalinks-hooks
   ```
   * npm
   ```sh
-  npm i permalinks-hooks
+  npm i @gwdevs/permalinks-hooks
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
