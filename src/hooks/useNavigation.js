@@ -4,6 +4,7 @@ import { trigger } from "../helpers/events";
 export default function useNavigation() {
 
   const getNewLocation = (path) => {
+    if (!path) return;
     const {pathname,search,origin} = window.location;
     const currentPath = pathname + search;
     const newPath = (path.startsWith("/") ? "" : "/") + path;
