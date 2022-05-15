@@ -1,8 +1,6 @@
-# usePermalinks
-
 Receives an array of routes and matches the current url to return the a data object. The array of routes can be skipped by using the PermalinksConfig component as ancestor.
 
-```js
+```jsx
 import { useState } from 'react';
 import { usePermalinks, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';

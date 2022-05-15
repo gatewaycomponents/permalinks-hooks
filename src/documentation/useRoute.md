@@ -1,5 +1,3 @@
-# useRoute
-
 Receives a route object and url data, and retrieves a single new object.
 
 ```js

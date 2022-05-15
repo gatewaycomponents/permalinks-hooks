@@ -1,5 +1,3 @@
-# useLocation
-
 Uses current window location and adds enhanced functionality.
 
 ```js

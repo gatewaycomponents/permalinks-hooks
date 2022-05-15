@@ -27,7 +27,7 @@ module.exports = {
       require('react-docgen-displayname-handler').createDisplayNameHandler(componentPath),
     )
   ),
-  title: `${upperFirst(camelCase(name))} v${version}`,
+  title: `${name} v${version}`,
   ribbon: {
     url: repository.url,
     text: 'View on GitHub',
