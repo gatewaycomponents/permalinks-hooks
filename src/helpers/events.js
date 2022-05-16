@@ -15,8 +15,8 @@ function once(eventType, listener) {
   }
 }
 
-function trigger(eventType, data) {
-  const event = new CustomEvent(eventType, { detail: data });
+function trigger(eventType, data = {}) {
+  const event = new CustomEvent(eventType, data);
   window.dispatchEvent(event);
 }
 

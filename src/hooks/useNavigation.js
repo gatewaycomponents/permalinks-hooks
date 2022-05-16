@@ -22,12 +22,12 @@ export default function useNavigation() {
   };
 
   //Function to handle client-side transitions
-  const push = (path, state = null) => {
+  const push = (path, state = {}) => {
     const newLocation = getNewLocation(path);
 
     if (!newLocation) return;
-    window.history.pushState(state, "", newLocation);
-    trigger("locationpush");
+    window.history.pushState({...state, date: Date.now()}, "", newLocation);
+    trigger("locationpush", { state: {...state, date: Date.now()} });
   };
 
   //Function to navigate back in history
