@@ -1,7 +1,7 @@
 {
   "name": "@gwdevs/permalinks-hooks",
   "description": "A collection of React Hooks that provide a way to simplify the implementation of permalinks into your React projects.",
-  "version": "1.0.5-beta.1",
+  "version": "1.1.0-beta.1",
   "private": false,
   "homepage": "https://permalinks-hooks.netlify.app/",
   "license": "MIT",
