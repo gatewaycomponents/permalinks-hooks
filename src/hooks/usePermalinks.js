@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { PermalinksContext } from "../context/PermalinksConfig";
+import processRoute from "../helpers/processRoute";
 import useLocation from "./useLocation";
-import useRoute from "./useRoute";
 
 // Uses an array of routes objects to return permalink and location data for current URL. This is an enhanced version of useLocation.
 export default function usePermalinks({ routes, /*id, config*/ }) {
@@ -24,14 +24,13 @@ export default function usePermalinks({ routes, /*id, config*/ }) {
     patharray?.findIndex((path) => path === route?.entry) + 1
   );
   
-  const { permalink, query, entry } = useRoute({
+  const { permalink, query, entry } = processRoute({
     route,
     routePath,
     query: locationQuery
   });
 
   //TODO Receive default routeData and push location.
-
   return {
     ...location,
     entry,

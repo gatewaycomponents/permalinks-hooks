@@ -1,5 +1,4 @@
 import useLocation from './hooks/useLocation';
-import useRoute from './hooks/useRoute';
 import usePermalinks from './hooks/usePermalinks';
 import useNavigation from './hooks/useNavigation';
 
@@ -10,7 +9,6 @@ import * as events from './helpers/events';
 export {
   useLocation,
   useNavigation,
-  useRoute,
   usePermalinks,
   PermalinksConfig,
   events

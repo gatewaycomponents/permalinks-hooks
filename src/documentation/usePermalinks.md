@@ -1,7 +1,7 @@
 Receives an array of routes and matches the current url to return the a data object. The array of routes can be skipped by using the PermalinksConfig component as ancestor.
 
 ```jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePermalinks, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';
 
@@ -22,11 +22,11 @@ function Component () {
     routes
   });
   const { push } = useNavigation();
-  
+
   // Change this links and click "Change location" or use your browser address bar to get different results.
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
   const link2 = '/scripture/unfoldingWord/en/ult/master/tit/3/12';
-
+  
   return (
     <>
       <ReactJson

@@ -25,13 +25,15 @@ export default function useNavigation() {
   const push = (path, state = {}) => {
     const newLocation = getNewLocation(path);
 
-    if (!newLocation) return;
+    if (!newLocation) return false;
     window.history.pushState({...state, date: Date.now()}, "", newLocation);
-    trigger("locationpush", { state: {...state, date: Date.now()} });
+    trigger("locationpush", { state: { ...state, date: Date.now() } });
+    return true;
   };
 
   //Function to navigate back in history
   const back = () => window.history.back();
+  const forward = () => window.history.forward();
 
-  return { push, load, back };
+  return { push, load, back, forward };
 }

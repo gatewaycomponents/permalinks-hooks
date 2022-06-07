@@ -1,6 +1,6 @@
 
 // Uses a route object and current path to retrieve permalink data from current URL
-export default function useRoute({ route, routePath, query: locationQuery }) {
+export default function processRoute({ route, routePath, query: locationQuery }) {
 
   //Returns an object with data from window path and query that matches given route.
   const data = routePath && route?.path.reduce((prev, curr, index) => {
