@@ -27,6 +27,7 @@ function Component () {
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
   const link2 = '/scripture/unfoldingWord/en/ult/master/tit/3/12';
   
+  console.log("Permalink example 1");
   return (
     <>
       <ReactJson
@@ -46,7 +47,7 @@ function Component () {
 
 ## Using usePermalinks with PermalinksConfig
 
-```js
+```jsx
 import { useState } from 'react';
 import { usePermalinks, PermalinksConfig, useLocation, useNavigation } from 'permalinks-hooks';
 import ReactJson from 'react-json-view';
@@ -98,7 +99,8 @@ function Component () {
   // Change this links and click "Change location" or use your browser address bar to get different results.
   const link1 = 'resource/unfoldingWord/en/tw/bible/kt/grace.md?search=gift';
   const link2 = '/scripture/unfoldingWord/en/ult/master/tit/3/12';
-
+  
+  console.log("Permalink example 2");
   return (
     <>
       <Resource/>

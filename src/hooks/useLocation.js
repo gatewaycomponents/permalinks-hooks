@@ -1,36 +1,23 @@
-import { useEffect, useMemo, useState } from "react";
+import {  useState, useEffect, useCallback } from "react";
 import { off, on } from "../helpers/events";
 
 // Uses current window location and adds enhanced functionality
 export default function useLocation() {
-  const [location, setLocation] = useState({
-    href: null,
-    origin: null,
-    protocol: null,
-    host: null,
-    hostname: null,
-    port: null,
-    pathname: null,
-    search: null,
-    hash: null,
-    reload: null,
-    replace: null
-  });
+  const [location, setLocation] = useState({ ...getCurrentLocation() });
+
+  const updateLocation = useCallback(() => {
+    const currentLocation = getCurrentLocation();
+
+    if (location.href !== currentLocation.href) {
+      setLocation(currentLocation)
+    }
+  },[location.href]);
 
   //Set location on first render
   useEffect(() => {
-    setLocation( getCurrentLocation );
-  }, []);
-
-  //Add event listeners
-  useEffect(() => {
-    const updateLocation = () => {
-      setLocation( getCurrentLocation );
-    };
-
+    // const eventOptions = {};
     //Update location when user navigates using back button
     on("popstate", updateLocation);
-
     //Update location when new location is pushed to History
     on("locationpush", updateLocation);
 
@@ -38,23 +25,19 @@ export default function useLocation() {
       off("popstate", updateLocation);
       off("locationpush", updateLocation);
     };
-  }, []);
+  }, [updateLocation]);
 
-  //Get path parts from url and add them to an array
-  const patharray = useMemo(
-    () => (location.pathname && location.pathname !== "/" ? [...location.pathname.split("/").slice(1)] : []),
-    [location.pathname]
-  );
-
-  //Get query key-value pairs and add them to an object
-  const query = useMemo(() => {
-    const queryParams = new URLSearchParams(location.search);
-    return { ...Object.fromEntries(queryParams?.entries()) };
-  }, [location.search]);
-
-
-  return { ...location, patharray, query };
+  return location;
 }
+
+//Get query key-value pairs and add them to an object
+const getQuery = (search) => {
+  const queryParams = new URLSearchParams(search);
+  return { ...Object.fromEntries(queryParams?.entries()) };
+}
+
+//Get path parts from url and add them to an array
+const getPatharray = (pathname) => (pathname && pathname !== "/" ? [...pathname.split("/").slice(1)] : [])
 
 const getCurrentLocation = () => {
   const {
@@ -69,7 +52,7 @@ const getCurrentLocation = () => {
     hash,
     reload,
     replace
-  } = window.location; 
+  } = window?.location || {}; 
   return {
     href,
     origin,
@@ -81,6 +64,8 @@ const getCurrentLocation = () => {
     search,
     hash,
     reload,
-    replace
+    replace,
+    patharray: getPatharray(pathname),
+    query: getQuery(search)
   }
 }

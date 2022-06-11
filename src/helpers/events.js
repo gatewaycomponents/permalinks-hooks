@@ -1,9 +1,9 @@
-function on(eventType, listener) {
-  window.addEventListener(eventType, listener);
+function on(eventType, listener, options) {
+  window.addEventListener(eventType, listener, options);
 }
 
-function off(eventType, listener) {
-  window.removeEventListener(eventType, listener);
+function off(eventType, listener, options) {
+  window.removeEventListener(eventType, listener, options);
 }
 
 function once(eventType, listener) {

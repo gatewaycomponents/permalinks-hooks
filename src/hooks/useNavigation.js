@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { trigger } from "../helpers/events";
 
 // Uses current window location and adds enhanced functionality
@@ -9,7 +10,7 @@ export default function useNavigation() {
     const currentPath = pathname + search;
     const newPath = (path.startsWith("/") ? "" : "/") + path;
 
-    if (currentPath === newPath) return null;
+    if (currentPath === newPath) return;
     return origin + newPath;
   }
  
@@ -22,18 +23,28 @@ export default function useNavigation() {
   };
 
   //Function to handle client-side transitions
-  const push = (path, state = {}) => {
+  const push = useCallback((path, state = {date: Date.now()},title) => {
     const newLocation = getNewLocation(path);
 
     if (!newLocation) return false;
-    window.history.pushState({...state, date: Date.now()}, "", newLocation);
-    trigger("locationpush", { state: { ...state, date: Date.now() } });
+
+    if (title) document.title = title;
+    window.history.pushState({ ...state }, "", newLocation);
+    trigger("locationpush", { state: { ...state } });
     return true;
+  }, []);
+  
+  //Function to handle client-side transitions
+  const replace = (path, state = { date: Date.now() }, title) => {
+    const newLocation = getNewLocation(path);
+
+    if (title) document.title = title;
+    window.history.replaceState(state,"",newLocation);
   };
 
   //Function to navigate back in history
   const back = () => window.history.back();
   const forward = () => window.history.forward();
 
-  return { push, load, back, forward };
+  return {replace, push, load, back, forward };
 }
